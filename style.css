@@ -1,121 +1,136 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    width: 100dvw;
-    height: 100dvh;
-}
-
-header{
+body {
     width: 100%;
-    height: 60px;
-    background-color: rgb(163, 163, 163);
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #b30000;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
     position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.507);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header img{
-    width: 30px;
+header img {
+    width: 40px;
     position: absolute;
-    left: 10px;
+    left: 20px;
 }
 
-header h1{
-    font-size: 20px;
-}
-
-main .banner{
-    width: 100%;
-    height: 200px;
-    background-image: url("assests/Banner.jpg");
-    background-size: cover;
-    margin: 10% 0;
-}
-
-main .infos{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.infos .sobre{
-    width: 90%;
-    height: 150px;
-    background-color: rgb(133, 133, 133);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: end;
-    position: relative;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
-}
-
-.sobre h2{
-    font-size: 20px;
-    position: absolute;
-    top: 10px;
-}
-
-.sobre p{
-    width: 90%;
-    font-size: 14px;
-    margin-bottom: 4%;
-}
-
-.cardapio{
-    width: 100%;
-    margin: 10% 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
-}
-
-.cardapio h2{
-    margin-bottom: 20px;
+header h1 {
+    font-size: 24px;
+    color: #fff;
     text-align: center;
 }
 
-.cardapio img{
-    width: 300px;
+main {
+    padding: 20px;
 }
 
+.banner {
+    width: 100%;
+    height: 250px;
+    background-color: #e60000;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
-@media (max-width: 350px) {
-    header img {
-        width: 25px;
-        left: 8px;
+.sobre {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.sobre h2 {
+    font-size: 22px;
+    color: #b30000;
+    margin-bottom: 10px;
+}
+
+.sobre p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.cardapio {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.cardapio h2 {
+    font-size: 22px;
+    color: #b30000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.barracas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.barraca img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contato {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contato h2 {
+    font-size: 22px;
+    color: #b30000;
+    margin-bottom: 10px;
+}
+
+.contato p {
+    font-size: 16px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 200px;
     }
+}
 
+@media (max-width: 480px) {
     header h1 {
-        font-size: 18px;
-        margin-left: 20px;
+        font-size: 20px;
     }
 
-    main .banner{
+    .banner {
         height: 180px;
     }
 
-    .infos .sobre{
-        height: 160px;
-    }
-
-    .sobre h2{
+    .sobre h2,
+    .cardapio h2,
+    .contato h2 {
         font-size: 18px;
-    }
-
-    .sobre p{
-        font-size: 14px;
-        margin-bottom: 5%;
     }
 }
